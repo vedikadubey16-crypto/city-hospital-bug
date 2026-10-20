@@ -1,0 +1,182 @@
+/* ==========================================================================
+   CITY CARE HOSPITAL - WELCOME / LANDING PAGE (index.css)
+   ========================================================================== */
+
+@import url('common.css');
+
+.landing-body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+/* ==========================================================================
+   LANDING HERO SECTION
+   ========================================================================== */
+
+.landing {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3.5rem 1.5rem;
+    background: linear-gradient(135deg, #90cfef 0%, #f4fafe 55%, #e0f1fb 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle decorative circles */
+.landing::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 70%);
+    top: -200px;
+    left: -150px;
+    pointer-events: none;
+}
+
+.landing::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(144, 207, 239, 0.35) 0%, rgba(144, 207, 239, 0) 70%);
+    bottom: -250px;
+    right: -200px;
+    pointer-events: none;
+}
+
+/* Welcome Card Wrapper */
+.landing-content {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 15px 35px rgba(3, 3, 74, 0.09);
+    padding: 3.5rem 2.5rem;
+    transition: var(--transition);
+}
+
+.landing-content:hover {
+    box-shadow: 0 20px 45px rgba(3, 3, 74, 0.13);
+}
+
+/* Medical Symbol / Badge */
+.medical-symbol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    font-size: 1.5rem;
+    color: var(--primary);
+    background: #eaf5fc;
+    padding: 0.5rem 1.75rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid #cce5f7;
+    margin-bottom: 2rem;
+    letter-spacing: 4px;
+}
+
+/* Headings */
+.landing h1 {
+    font-size: clamp(1.4rem, 2.5vw, 1.85rem);
+    font-weight: 700;
+    color: var(--text-muted);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.landing h2 {
+    font-size: clamp(2.3rem, 5vw, 3.8rem);
+    font-weight: 900;
+    color: var(--primary-dark);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.25rem;
+}
+
+.tagline {
+    font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.85rem;
+}
+
+.description {
+    font-size: clamp(1rem, 1.6vw, 1.15rem);
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 580px;
+    margin: 0 auto 2.5rem;
+}
+
+/* Continue Button */
+.continue-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #ffffff;
+    padding: 1.1rem 3.5rem;
+    border-radius: var(--radius-pill);
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 20px rgba(4, 4, 147, 0.3);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.continue-button:hover {
+    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 28px rgba(4, 4, 147, 0.4);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .landing {
+        padding: 2rem 1rem;
+    }
+
+    .landing-content {
+        padding: 2.5rem 1.5rem;
+        border-radius: 18px;
+    }
+
+    .medical-symbol {
+        font-size: 1.2rem;
+        gap: 0.5rem;
+        letter-spacing: 2px;
+        padding: 0.4rem 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .continue-button {
+        width: 100%;
+        max-width: 280px;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,11 @@
+
+.venv/
+**/.venv/
+__pycache__/
+*.pyc
+*.db
+.env
+BUG_LIST.md
+CITY_HOSPITAL_BUG_HUNT_DOCUMENTATION.pdf
+.env.*
+.vscode/

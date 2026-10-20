@@ -1,0 +1,522 @@
+/* ==========================================================================
+   CITY CARE HOSPITAL - HOMEPAGE STYLES (main.css)
+   ========================================================================== */
+
+@import url('common.css');
+
+/* ==========================================================================
+   HERO SECTION (#block)
+   ========================================================================== */
+
+#block {
+    width: 100%;
+    background: linear-gradient(135deg, #90cfef 0%, #f4fafe 55%, #e0f1fb 100%);
+    border-bottom: 1px solid var(--border-color);
+    padding: 3.5rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-wrapper {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.text {
+    flex: 1;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#maintext {
+    color: var(--primary-dark);
+    font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 1rem;
+}
+
+#extra {
+    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    color: var(--text-muted);
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+#bbutton {
+    background: linear-gradient(135deg, #d32f2f, #b71c1c);
+    color: #ffffff;
+    border: none;
+    height: 52px;
+    padding: 0 1.75rem;
+    border-radius: var(--radius-pill);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.35);
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+#bbutton:hover {
+    background: linear-gradient(135deg, #b71c1c, #8e0000);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(211, 47, 47, 0.45);
+}
+
+#symbol {
+    font-size: 1.35rem;
+    color: var(--primary);
+    opacity: 0.85;
+    margin: 0.75rem 0;
+    letter-spacing: 3px;
+}
+
+.image {
+    width: 320px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: var(--shadow-lg);
+    border: 5px solid #ffffff;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.image:hover {
+    transform: scale(1.02);
+}
+
+/* ==========================================================================
+   DEPARTMENTS SECTION
+   ========================================================================== */
+
+#hdepartment {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 0 1rem;
+}
+
+#hdepartment h1 {
+    color: var(--primary-dark);
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+#motive {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+    margin-top: 0.35rem;
+    margin-bottom: 2.5rem;
+    padding: 0 1rem;
+}
+
+/* Department Grid Wrapper */
+.dep-grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: calc(100% - 2rem);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+/* Legacy container compatibility */
+#hdep1, #hdep2 {
+    display: contents;
+}
+
+#cardiology,
+#dentistry,
+#medicine,
+#pediatrics,
+#orthopedics,
+#pulmunology {
+    background: linear-gradient(180deg, #ffffff 0%, #e3f3fc 100%);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 2rem 1.5rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    min-height: 280px;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+#cardiology:hover,
+#dentistry:hover,
+#medicine:hover,
+#pediatrics:hover,
+#orthopedics:hover,
+#pulmunology:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: #b9dcf0;
+}
+
+#cardioimage,
+#dentistryimage,
+#medicineimage,
+#pediatricsimage,
+#orthopedicsimage,
+#pulmunologyimage {
+    width: 76px;
+    height: 76px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(3, 3, 74, 0.08);
+    margin: 0 0 1rem 0;
+    padding: 6px;
+}
+
+#headingdep,
+.headingdep {
+    color: var(--primary-dark);
+    font-size: 1.18rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.35rem;
+}
+
+#motodep,
+.motodep {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+#linkdep,
+.linkdep {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.45rem 1.4rem;
+    border-radius: var(--radius-pill);
+    background-color: rgba(4, 4, 147, 0.08);
+    color: var(--primary);
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+#linkdep h3,
+.linkdep h3 {
+    font-size: 0.92rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+#linkdep:hover,
+.linkdep:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   CALL TO ACTION STRIPS (#book & #appointment)
+   ========================================================================== */
+
+#book,
+#appointment {
+    max-width: 1100px;
+    width: calc(100% - 2rem);
+    margin: 2rem auto;
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    padding: 1.4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    transition: var(--transition);
+}
+
+#book:hover,
+#appointment:hover {
+    box-shadow: var(--shadow-lg);
+    border-color: #b4dbf3;
+}
+
+.strip-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+#calender,
+#acalender {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #eaf5fc;
+    padding: 8px;
+    flex-shrink: 0;
+}
+
+#matter,
+#amatter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+#hbook,
+#happointment {
+    color: var(--primary-dark);
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+#cbook,
+#cappointment {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+#bookingbutton,
+#appointmentbutton {
+    background-color: var(--primary);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius-md);
+    height: 48px;
+    padding: 0 1.5rem;
+    font-weight: 700;
+    font-size: 0.92rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(4, 4, 147, 0.2);
+}
+
+#bookingbutton:hover,
+#appointmentbutton:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(4, 4, 147, 0.3);
+}
+
+#bookingbutton:hover #textbutton {
+    color: transparent;
+}
+
+#textbutton,
+#atextbutton {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+}
+
+/* ==========================================================================
+   WHY CHOOSE CITY CARE HOSPITAL (#importance)
+   ========================================================================== */
+
+#importance {
+    width: 100%;
+    background: linear-gradient(135deg, #eef7fc 0%, #f8fbfe 100%);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 4.5rem 1.5rem;
+    margin-top: 4rem;
+}
+
+#mimp {
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#himp {
+    text-align: center;
+    color: var(--primary-dark);
+    font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+    font-weight: 800;
+    margin-bottom: 3rem;
+}
+
+#benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+}
+
+#expdoct,
+#quickserv,
+#advfac,
+#care {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    padding: 2.2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: var(--transition);
+}
+
+#expdoct:hover,
+#quickserv:hover,
+#advfac:hover,
+#care:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: #b9dcf0;
+}
+
+#expdocimg,
+#quickservimg,
+#advfacimg,
+#careimg {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    border-radius: 50%;
+    background-color: #eaf5fc;
+    padding: 10px;
+    margin-bottom: 1.25rem;
+}
+
+#bimp {
+    color: var(--primary-dark);
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+#simp {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+
+/* Tablets (landscape and small laptops) */
+@media (max-width: 992px) {
+    .dep-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    #benefits {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .hero-wrapper {
+        gap: 2rem;
+    }
+
+    .image {
+        width: 270px;
+        height: 270px;
+    }
+}
+
+/* Tablets and Mobile */
+@media (max-width: 768px) {
+    #block {
+        padding: 2.5rem 1rem;
+    }
+
+    .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .text {
+        align-items: center;
+        max-width: 100%;
+    }
+
+    #bbutton {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+    }
+
+    .image {
+        width: 240px;
+        height: 240px;
+        border-radius: 20px;
+    }
+
+    #book,
+    #appointment {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.75rem 1.25rem;
+        gap: 1.25rem;
+    }
+
+    .strip-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    #bookingbutton,
+    #appointmentbutton {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #importance {
+        padding: 3rem 1rem;
+        margin-top: 2.5rem;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 600px) {
+    .dep-grid-container {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+    }
+
+    #benefits {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}

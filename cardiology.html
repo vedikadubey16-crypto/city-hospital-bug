@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cardiology - City Care Hospital</title>
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+
+        /* =========================================
+           GENERAL
+        ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-sans);
+            color: rgb(3, 3, 74);
+            background: white;
+        }
+
+
+        /* =========================================
+           COMMON SECTION
+        ========================================= */
+
+        .main-section {
+            width: 100%;
+            padding: 35px 0;
+            background: white;
+        }
+
+        .section-box {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+
+        /* =========================================
+           MAIN SECTION HEADINGS
+        ========================================= */
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin: 5px 0 25px;
+            color: rgb(3, 3, 74);
+        }
+
+
+        /* =========================================
+           CARDIOLOGY MAIN HERO
+        ========================================= */
+
+        .cardio-hero {
+            width: 100%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #90cfef,
+                    #f9f9f9
+                );
+
+            padding: 40px 0;
+        }
+
+        .hero-inside {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+        .hero-text {
+            width: 55%;
+        }
+
+        .hero-text h1 {
+            font-size: 45px;
+            margin: 0 0 15px;
+            color: rgb(3, 3, 74);
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.5;
+            margin: 8px 0;
+            color: rgb(3, 3, 74);
+        }
+
+        .hero-image {
+            width: 330px;
+            height: 230px;
+            object-fit: contain;
+            border-radius: 15px;
+        }
+
+
+        /* =========================================
+           ABOUT CARDIOLOGY
+           GRADIENT KEPT
+        ========================================= */
+
+        .about-box {
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    white,
+                    #9fdaf8
+                );
+
+            border-radius: 15px;
+
+            padding: 25px 35px;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .about-box h2 {
+            color: rgb(3, 3, 74);
+        }
+
+        .about-box p {
+            font-size: 17px;
+            line-height: 1.7;
+            text-align: justify;
+            color: rgb(3, 3, 74);
+        }
+
+
+        /* =========================================
+           OUR CARDIOLOGY SERVICES
+        ========================================= */
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .service-card {
+
+            width: 240px;
+            min-height: 150px;
+
+            padding: 20px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    white,
+                    #9fdaf8
+                );
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.15);
+
+            border: 1px solid #d9eef8;
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            margin-top: 5px;
+            color: rgb(3, 3, 74);
+        }
+
+        .service-card p {
+            line-height: 1.5;
+            color: rgb(3, 3, 74);
+        }
+
+
+        /* =========================================
+           DOCTORS
+        ========================================= */
+
+        .doctors-area {
+            width: 900px;
+            max-width: 95%;
+            margin: auto;
+        }
+
+        .doctors {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .doctor-card {
+
+            flex: 1;
+
+            max-width: 280px;
+
+            padding: 18px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    white,
+                    #9fdaf8
+                );
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.15);
+
+            border: 1px solid #d9eef8;
+        }
+
+        .doctor-card img {
+
+            width: 145px;
+            height: 145px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 4px solid #90cfef;
+
+            box-shadow:
+                0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .doctor-card h3 {
+
+            font-size: 19px;
+
+            margin: 12px 0 5px;
+
+            color: rgb(3, 3, 74);
+        }
+
+        .doctor-card p {
+
+            margin: 7px 0;
+
+            color: rgb(3, 3, 74);
+        }
+
+        .doctor-button {
+
+            display: inline-block;
+
+            margin-top: 8px;
+
+            padding: 8px 14px;
+
+            background: rgb(3, 3, 74);
+
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 7px;
+
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* =========================================
+           HOW TO VISIT
+           GRADIENT KEPT
+        ========================================= */
+
+        .visit-box {
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    white,
+                    #9fdaf8
+                );
+
+            border-radius: 15px;
+
+            padding: 25px 40px;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.13);
+        }
+
+        .visit-box h2 {
+            color: rgb(3, 3, 74);
+        }
+
+        .visit-box p {
+            font-size: 17px;
+            line-height: 1.6;
+            color: rgb(3, 3, 74);
+        }
+
+
+        /* =========================================
+           FAQ
+           NO GRADIENT
+        ========================================= */
+
+        .faq-container {
+            width: 90%;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .faq {
+            margin-bottom: 12px;
+        }
+
+        .faq-question {
+
+            padding: 15px;
+
+            background: white;
+
+            border: 1px solid #c9e8f7;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+
+            font-weight: bold;
+
+            color: rgb(3, 3, 74);
+        }
+
+        .faq-answer {
+
+            display: none;
+
+            padding: 15px;
+
+            background: white;
+
+            line-height: 1.5;
+
+            border: 1px solid #c9e8f7;
+
+            border-top: none;
+
+            border-radius: 0 0 8px 8px;
+
+            color: rgb(3, 3, 74);
+        }
+
+
+        /* =========================================
+           APPOINTMENT
+           OUTER SECTION = WHITE
+        ========================================= */
+
+        .appointment-section {
+
+            width: 100%;
+
+            background: white;
+
+            padding: 40px 0;
+        }
+
+
+        /* =========================================
+           SMALL APPOINTMENT DIV
+           GRADIENT KEPT
+        ========================================= */
+
+        .appointment-box {
+
+            width: 85%;
+
+            max-width: 950px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            gap: 25px;
+
+            padding: 30px;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    white,
+                    #9fdaf8
+                );
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .appointment-box h2 {
+            color: rgb(3, 3, 74);
+        }
+
+        .appointment-box p {
+            color: rgb(3, 3, 74);
+        }
+
+        .booking-button {
+
+            background: rgb(3, 3, 74);
+
+            color: white;
+
+            padding: 13px 25px;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            font-family: Arial, sans-serif;
+
+            font-weight: bold;
+
+            white-space: nowrap;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            .hero-inside {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .hero-text {
+                width: 100%;
+            }
+
+            .hero-text h1 {
+                font-size: 35px;
+            }
+
+            .hero-image {
+                width: 280px;
+            }
+
+            .doctors {
+                flex-wrap: wrap;
+            }
+
+            .doctor-card {
+                min-width: 230px;
+            }
+
+            .appointment-box {
+
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+    <div class="navbar">
+        <a href="main.html" class="logo-container">
+            <span class="logo">♥︎ 🩺 ♥︎ CITY CARE HOSPITAL</span>
+        </a>
+        <nav class="nav-menu">
+            <a href="main.html" class="nav-link">Home</a>
+            <a href="department.html" class="nav-link active">Departments</a>
+            <a href="booking.html" class="nav-link">Book Appointment</a>
+            <a href="appointments.html" class="nav-link">My Bookings</a>
+        </nav>
+        <a href="tel:123456789" class="emergency-button">
+            Emergency? Call ☎ 123-456-789
+        </a>
+    </div>
+</header>
+
+
+<!-- =====================================================
+     CARDIOLOGY MAIN HEADING
+===================================================== -->
+
+<section class="cardio-hero">
+
+    <div class="hero-inside">
+
+        <div class="hero-text">
+
+            <h1>
+                CARDIOLOGY
+            </h1>
+
+            <p>
+                <b>
+                    Heart Care and Treatment
+                </b>
+            </p>
+
+            <p>
+                Comprehensive cardiac care from
+                experienced specialists using modern
+                medical facilities.
+            </p>
+
+        </div>
+
+
+        <img
+            src="cardiology.png"
+            class="hero-image"
+            alt="Cardiology"
+        >
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT CARDIOLOGY
+===================================================== -->
+
+<section class="main-section">
+
+    <div class="section-box">
+
+        <div class="about-box">
+
+            <h2 class="section-title">
+                About Cardiology
+            </h2>
+
+            <p>
+
+                The Cardiology Department at City Care Hospital
+                provides comprehensive diagnosis, treatment and
+                management of heart-related conditions.
+
+            </p>
+
+            <p>
+
+                Our experienced cardiologists provide
+                patient-centered care using modern diagnostic
+                facilities and advanced treatment methods.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OUR CARDIOLOGY SERVICES
+===================================================== -->
+
+<section class="main-section">
+
+    <div class="section-box">
+
+        <h2 class="section-title">
+            Our Cardiology Services
+        </h2>
+
+
+        <div class="services">
+
+
+            <div class="service-card">
+
+                <h3>
+                    Heart Check-up
+                </h3>
+
+                <p>
+                    Complete cardiac health evaluation
+                    and routine heart screening.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <h3>
+                    ECG
+                </h3>
+
+                <p>
+                    Examination of the electrical
+                    activity of the heart.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <h3>
+                    Echocardiography
+                </h3>
+
+                <p>
+                    Detailed examination of heart
+                    structure and function.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <h3>
+                    Cardiac Consultation
+                </h3>
+
+                <p>
+                    Specialist consultation for
+                    heart-related problems.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OUR CARDIOLOGY SPECIALISTS
+===================================================== -->
+
+<section class="main-section">
+
+    <div class="section-box">
+
+        <h2 class="section-title">
+            Our Cardiology Specialists
+        </h2>
+
+
+        <div class="doctors-area">
+
+            <div class="doctors">
+
+
+                <div class="doctor-card">
+
+                    <img
+                        src="doctor1.jpg"
+                        alt="Female Doctor"
+                    >
+
+                    <h3>
+                        Dr. Ananya Sharma
+                    </h3>
+
+                    <p>
+                        Cardiologist
+                    </p>
+
+                    <p>
+                        12+ Years Experience
+                    </p>
+
+                    <a
+                        href="booking.html"
+                        class="doctor-button"
+                    >
+                        Book Appointment
+                    </a>
+
+                </div>
+
+
+                <div class="doctor-card">
+
+                    <img
+                        src="doctor3.jpg"
+                        alt="Male Doctor"
+                    >
+
+                    <h3>
+                        Dr. Rahul Mehta
+                    </h3>
+
+                    <p>
+                        Interventional Cardiologist
+                    </p>
+
+                    <p>
+                        15+ Years Experience
+                    </p>
+
+                    <a
+                        href="booking.html"
+                        class="doctor-button"
+                    >
+                        Book Appointment
+                    </a>
+
+                </div>
+
+
+                <div class="doctor-card">
+
+                    <img
+                        src="doctor2.jpg"
+                        alt="Female Doctor"
+                    >
+
+                    <h3>
+                        Dr. Priya Kapoor
+                    </h3>
+
+                    <p>
+                        Cardiac Specialist
+                    </p>
+
+                    <p>
+                        10+ Years Experience
+                    </p>
+
+                    <a
+                        href="booking.html"
+                        class="doctor-button"
+                    >
+                        Book Appointment
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HOW TO VISIT
+===================================================== -->
+
+<section class="main-section">
+
+    <div class="section-box">
+
+        <div class="visit-box">
+
+            <h2 class="section-title">
+                How to Visit Our Cardiology Department
+            </h2>
+
+
+            <p>
+                <b>1.</b>
+                Book an appointment with our cardiologist.
+            </p>
+
+
+            <p>
+                <b>2.</b>
+                Visit City Care Hospital on your appointment date.
+            </p>
+
+
+            <p>
+                <b>3.</b>
+                Meet the cardiologist for consultation.
+            </p>
+
+
+            <p>
+                <b>4.</b>
+                Complete the recommended tests if required.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FREQUENTLY ASKED QUESTIONS
+===================================================== -->
+
+<section class="main-section">
+
+    <div class="section-box">
+
+        <h2 class="section-title">
+            Frequently Asked Questions
+        </h2>
+
+
+        <div class="faq-container">
+
+
+            <div class="faq">
+
+                <div
+                    class="faq-question"
+                    onclick="toggleFAQ(this)"
+                >
+                    When should I visit a cardiologist?
+                </div>
+
+                <div class="faq-answer">
+
+                    You should consider visiting a cardiologist
+                    if you experience symptoms such as chest pain,
+                    shortness of breath or irregular heartbeat.
+
+                </div>
+
+            </div>
+
+
+            <div class="faq">
+
+                <div
+                    class="faq-question"
+                    onclick="toggleFAQ(this)"
+                >
+                    What tests may be required?
+                </div>
+
+                <div class="faq-answer">
+
+                    Depending on your symptoms, your doctor may
+                    recommend ECG, echocardiography or other
+                    cardiac evaluations.
+
+                </div>
+
+            </div>
+
+
+            <div class="faq">
+
+                <div
+                    class="faq-question"
+                    onclick="toggleFAQ(this)"
+                >
+                    Can I book an appointment online?
+                </div>
+
+                <div class="faq-answer">
+
+                    Yes. Click the Book Appointment button
+                    to schedule your visit.
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     BOOK APPOINTMENT
+===================================================== -->
+
+<section class="appointment-section">
+
+    <div class="appointment-box">
+
+
+        <div>
+
+            <h2>
+                Book Your Cardiology Appointment
+            </h2>
+
+            <p>
+                Schedule your visit with our experienced
+                cardiology specialists.
+            </p>
+
+        </div>
+
+
+        <a
+            href="appointments.html"
+            class="booking-button"
+        >
+            BOOK APPOINTMENT
+        </a>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+    <div class="last">
+        <div class="footertop">
+            <div class="slogan">
+                <a href="main.html" class="end">
+                    <span class="endlogo">✚ CITY CARE HOSPITAL</span>
+                </a>
+                <span class="eend">Better health, brighter future</span>
+            </div>
+            <nav class="footer-nav">
+                <a href="main.html" class="end">Home</a>
+                <a href="department.html" class="end">Departments</a>
+                <a href="booking.html" class="end">Book Appointment</a>
+                <a href="appointments.html" class="end">My Bookings</a>
+                <a href="tel:123456789" class="end footer-emergency">Emergency? Call ☎: 123-456-789</a>
+            </nav>
+        </div>
+        <div class="copyright">© 2026 City Care Hospital. All Rights Reserved.</div>
+    </div>
+</footer>
+
+
+<!-- =====================================================
+     FAQ JAVASCRIPT
+===================================================== -->
+
+<script>
+
+function toggleFAQ(element) {
+
+    let answer = element.nextElementSibling;
+
+    if (answer.style.display === "block") {
+
+        answer.style.display = "none";
+
+    } else {
+
+        answer.style.display = "block";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
